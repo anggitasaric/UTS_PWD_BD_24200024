@@ -1,113 +1,96 @@
+Buatlah external style sheet berdasarkan petunjuk berikut ini:
 
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JobSeekr - Temukan Karier Impianmu</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+1. Definisikan Variabel CSS di :root
+--primary: gunakan warna#ccc7c7
+--accent: gunakan warna #6c63ff
+--gradient-bg: buat gradien dari kiri ke kanan dengan kombinasi #6c63ff, #7b68ee, dan #a067e3
+--text: gunakan warna #333
 
-<style>
-  body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      padding: 50px;
-  }
-  .icon-box {
-      border: 1px solid #6c757d;
-      display: inline-block;
-      padding: 12px;
-      margin: 30px;
-      border-radius: 10px;
-  }
-  .icon-box {
-      color:  #0046be;
-      margin-bottom: 10px;
-      font-size: 50px;
-  }
-  .icon-box:hover {
-      border: 1px solid #2d2d2d;
-      animation: bounce 2s infinite;
-  }
+2. Atur Reset CSS
+Terapkan box-sizing: border-box untuk semua elemen.
+Hilangkan margin dan padding default.
 
-  @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-          transform: translateY(0);
-      }
-      40% {
-          transform: translateY(-30px);
-      }
-      60% {
-          transform: translateY(-10px);
-      }
-  }
+3. Atur Tampilan body
+Gunakan font 'Inter', sans-serif
+Latar belakang #f4f6fa
+Warna teks menggunakan variabel --text
 
-  .icon-box i.rotate {
-      animation: rotate 2s linear infinite;
-  }
-  @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-  }
-  .icon-box:hover i {
-      color: #00a6ff;
-  }
-</style>
-<body>
-  <p style="background-color: #f6f8fb></p>
-  <header>
-    <img src="logo.png">
-    <h1>Temukan Karier Impianmu</h1>
-    <p>Buat resume profesional, cari pekerjaan, dan kelola aplikasi Anda – semuanya dalam satu platform.</p>
-    <button class="btn-primary">Mulai Sekarang</button>
-  </header>
+4. Desain Bagian header
+Gunakan latar belakang gradien dari variabel --gradient-bg
+Warna teks putih
+Padding atas bawah 80px, kiri kanan 20px
+Teks rata tengah
+Untuk elemen <h1> dalam header:
+Ukuran font 3rem
+Tebal font 800
+Margin bawah 15px
+Untuk elemen <p> dalam header:
+Ukuran font 1.2rem
+Margin bawah 30px
 
-  <section class="steps">
-    <div class="step">
-      <i class="fas fa-file-alt"></i>
-      <h3>Buat Resume</h3>
-      <p>Gunakan pembuat resume kami yang modern untuk membuat dokumen profesional dalam hitungan menit.</p>
-    </div>
-    <div class="step">
-      <i class="fas fa-search"></i>
-      <h3>Cari Pekerjaan</h3>
-      <p>Telusuri ribuan lowongan kerja yang relevan dengan keahlian dan lokasi Anda.</p>
-    </div>
-    <div class="step">
-      <i class="fas fa-briefcase"></i>
-      <h3>Lamar dan Kelola</h3>
-      <p>Lacak lamaran Anda dan simpan pekerjaan favorit dengan mudah dalam dashboard pribadi Anda.</p>
-    </div>
-  </section>
 
-  <section class="reviews">
-    <h2>Testimoni Pengguna</h2>
-    <div class="review-list">
-      <div class="review">
-        <p>"JobSeekr membantu saya membuat resume yang profesional dan mudah diterima oleh perusahaan!"</p>
-        <h4>— Rina, Fresh Graduate</h4>
-      </div>
-      <div class="review">
-        <p>"Saya suka fitur pelacakan lamaran. Semua lowongan yang saya lamar bisa saya pantau dengan mudah."</p>
-        <h4>— Andre, Digital Marketer</h4>
-      </div>
-      <div class="review">
-        <p>"Prosesnya cepat dan antarmukanya mudah digunakan. Sangat cocok untuk profesional yang sibuk."</p>
-        <h4>— Sari, HR Specialist</h4>
-      </div>
-    </div>
-  </section>
+4. Desain Bagian header
+Gunakan latar belakang gradien dari variabel --gradient-bg
+Warna teks putih
+Padding atas bawah 80px, kiri kanan 20px
+Teks rata tengah
+Untuk elemen <h1> dalam header:
+Ukuran font 3rem
+Tebal font 800
+Margin bawah 15px
+Untuk elemen <p> dalam header:
+Ukuran font 1.2rem
+Margin bawah 30px
 
-  <section class="cta">
-    <h2>Wujudkan Masa Depan Profesional Anda</h2>
-    <p>Bergabunglah dengan komunitas global pencari kerja dan buka peluang karier yang lebih luas hari ini.</p>
-    <button class="btn-primary">Gabung Gratis</button>
-  </section>
+5. Desain Tombol cta-btn
+Warna latar putih, teks menggunakan warna --accent
+Padding 12px atas bawah dan 24px kiri kanan
+Border radius 30px, tanpa border
+Ukuran font 1rem dan tebal 600
+Tambahkan efek hover: ubah latar belakang jadi #ddd
 
-  <footer>
-    <p>&copy; 2025 JobSeekr</p>
-  </footer>
-</body>
-</html>
+6. Desain section Konten
+Padding 60px atas bawah dan 20px kiri kanan
+Lebar maksimum 1100px dan berada di tengah (center)
+Teks rata tengah
+Untuk elemen h2 dalam section:
+Ukuran font 2rem
+Margin bawah 20px
+Warna menggunakan --primary
+Untuk elemen p dalam section:
+Ukuran font 1.1rem
+Margin bawah 30px
+Batasi lebar maksimum 800px dan pusatkan ke tengah
 
+7. Tambahkan Border pada Section Aktivitas
+Tambahkan garis atas 1px dashed gray untuk class .activities
+
+8. Buat Grid Aktivitas
+Gunakan class .activity-grid dengan:
+Display: grid
+Kolom otomatis dengan minimal 250px per elemen
+Jarak antar item (gap) 30px
+Margin atas 40px
+
+- Untuk tiap .activity:
+  Latar putih, padding 30px atas bawah dan 20px kiri kanan
+  Border radius 12px
+  Efek bayangan halus (box-shadow)
+  Transisi halus saat hover → naik sedikit translateY(-5px)
+ 
+- Untuk ikon di dalam aktivitas (.activity i):
+  Ukuran font 2.5rem
+  Warna menggunakan --accent
+  
+- Untuk judul aktivitas (.activity h3):
+  Ukuran font 1.3rem
+  Warna --primary
+
+9. Desain Footer
+Latar belakang #222, teks #bbb
+Rata tengah, padding 30px atas bawah dan 20px kiri kanan
+Margin atas 40px
+
+10. Responsif di Mobile (max-width: 768px)
+Ukuran font header <h1> menjadi 2.2rem
+Ukuran paragraf di section menjadi 1rem
